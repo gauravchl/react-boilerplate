@@ -5,6 +5,9 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "npm install",
+    "start": "concurrently \"npm run watch\" \"npm run serve\"",
+    "serve": "http-server -p 3000",
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development --progress",
     "prepublish": "npm run build"
@@ -13,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/gauravchl/react-boilerplate.git"
   },
-  "author": "Gaurav Chikhale",
+  "author": "Gaurav Chikhale <mail@gauravchl.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gauravchl/react-boilerplate/issues"
@@ -29,6 +32,8 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.6.1",
+    "http-server": "^0.11.1",
     "webpack": "^4.16.0",
     "webpack-cli": "^3.0.8"
   }
